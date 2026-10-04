@@ -1,0 +1,11 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  SECRETS_SCAN_OMIT_KEYS = "VITE_PULSE_API_URL,VITE_PULSE_WS_URL"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
