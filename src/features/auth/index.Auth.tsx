@@ -1,6 +1,12 @@
+import { useLocation } from "react-router-dom";
+
 import SignIn from "./components/SignIn";
+import SignUp from "./components/SignUp";
 
 const IndexAuth = () => {
+  const { pathname } = useLocation();
+  const isRegister = pathname === "/register";
+
   return (
     <main className="auth-page">
       <div className="auth-page__background" aria-hidden="true">
@@ -11,7 +17,7 @@ const IndexAuth = () => {
         <span className="auth-page__noise" />
       </div>
 
-      <SignIn />
+      {isRegister ? <SignUp /> : <SignIn />}
     </main>
   );
 };
