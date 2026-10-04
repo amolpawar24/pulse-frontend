@@ -1,0 +1,99 @@
+// =========================================================
+// BREAKPOINT SYSTEM
+// Max-width responsive approach
+// =========================================================
+
+
+// ===================== BREAKPOINT VALUES =====================
+
+$xxs: 320px;   // Extra extra small phones
+$xs: 480px;    // Small phones
+$sm: 576px;    // Large phones
+$md: 768px;    // Tablets
+$lg: 992px;    // Small laptops
+$xl: 1200px;   // Desktops
+$xxl: 1400px;  // Large screens
+
+
+// ===================== CORE MIXINS =====================
+
+// Extra extra small devices
+@mixin xxs {
+  @media (max-width: $xxs) {
+    @content;
+  }
+}
+
+
+// Extra small devices
+@mixin xs {
+  @media (max-width: $xs) {
+    @content;
+  }
+}
+
+
+// Small devices
+@mixin sm {
+  @media (max-width: $sm) {
+    @content;
+  }
+}
+
+
+// Medium devices
+@mixin md {
+  @media (max-width: $md) {
+    @content;
+  }
+}
+
+
+// Large devices
+@mixin lg {
+  @media (max-width: $lg) {
+    @content;
+  }
+}
+
+
+// Extra large devices
+@mixin xl {
+  @media (max-width: $xl) {
+    @content;
+  }
+}
+
+
+// Extra extra large devices
+@mixin xxl {
+  @media (max-width: $xxl) {
+    @content;
+  }
+}
+
+
+// ===================== DEVICE SHORTCUTS =====================
+
+// Mobile
+@mixin mobile {
+  @media (max-width: $md) {
+    @content;
+  }
+}
+
+
+// Tablet
+@mixin tablet {
+  @media (max-width: $lg) {
+    @content;
+  }
+}
+
+
+// Desktop
+@mixin desktop {
+  @media (min-width: $lg) {
+    @content;
+  }
+}
