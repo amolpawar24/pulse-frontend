@@ -1,0 +1,157 @@
+/* =========================================================
+   PULSE - TYPOGRAPHY
+========================================================= */
+
+@use "../abstracts/variables" as vars;
+
+/* =========================================================
+   ROOT TYPOGRAPHY
+========================================================= */
+
+body {
+  font-family: vars.$font-family-base;
+  font-size: vars.$font-size-md;
+  font-weight: vars.$font-weight-regular;
+  line-height: vars.$line-height-normal;
+  color: vars.$color-text;
+}
+
+/* =========================================================
+   HEADINGS
+========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: vars.$color-text;
+  font-family: vars.$font-family-heading;
+  font-weight: vars.$font-weight-bold;
+  line-height: vars.$line-height-tight;
+}
+
+/* =========================================================
+   HEADING SIZES
+========================================================= */
+
+h1 {
+  font-size: vars.$font-size-4xl;
+}
+
+h2 {
+  font-size: vars.$font-size-3xl;
+}
+
+h3 {
+  font-size: vars.$font-size-2xl;
+}
+
+h4 {
+  font-size: vars.$font-size-xl;
+}
+
+h5 {
+  font-size: vars.$font-size-lg;
+}
+
+h6 {
+  font-size: vars.$font-size-md;
+}
+
+/* =========================================================
+   PARAGRAPHS
+========================================================= */
+
+p {
+  color: vars.$color-text-secondary;
+  font-size: vars.$font-size-md;
+  font-weight: vars.$font-weight-regular;
+  line-height: vars.$line-height-normal;
+}
+
+/* =========================================================
+   SMALL TEXT
+========================================================= */
+
+small {
+  font-size: vars.$font-size-sm;
+  line-height: vars.$line-height-normal;
+}
+
+/* =========================================================
+   STRONG TEXT
+========================================================= */
+
+strong,
+b {
+  font-weight: vars.$font-weight-bold;
+}
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+a {
+  color: vars.$color-primary;
+  transition:
+    color vars.$transition-base,
+    opacity vars.$transition-base;
+
+  &:hover {
+    color: vars.$color-primary-hover;
+  }
+}
+
+/* =========================================================
+   LABELS
+========================================================= */
+
+label {
+  color: vars.$color-text-secondary;
+  font-size: vars.$font-size-sm;
+  font-weight: vars.$font-weight-medium;
+  line-height: vars.$line-height-normal;
+}
+
+/* =========================================================
+   PLACEHOLDER
+========================================================= */
+
+::placeholder {
+  color: vars.$color-text-light;
+  font-weight: vars.$font-weight-regular;
+}
+
+/* =========================================================
+   TEXT UTILITIES
+========================================================= */
+
+.text-primary {
+  color: vars.$color-primary;
+}
+
+.text-secondary {
+  color: vars.$color-text-secondary;
+}
+
+.text-muted {
+  color: vars.$color-text-muted;
+}
+
+.text-light {
+  color: vars.$color-text-light;
+}
+
+.text-success {
+  color: vars.$color-success;
+}
+
+.text-warning {
+  color: vars.$color-warning;
+}
+
+.text-danger {
+  color: vars.$color-danger;
+}
