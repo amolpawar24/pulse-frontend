@@ -1,11 +1,9 @@
 @use "../../../abstracts/variables" as vars;
 @use "../../../abstracts/breakpoints" as *;
 
-
 /* =========================================================
    PULSE - HOME ABOUT
 ========================================================= */
-
 
 /* =========================================================
    ABOUT
@@ -13,22 +11,16 @@
 
 .home-about {
   display: grid;
-  grid-template-columns:
-    minmax(0, 1fr)
-    minmax(420px, 0.9fr);
-
+  grid-template-columns: minmax(0, 1fr) minmax(420px, 0.9fr);
   align-items: center;
-
   gap: 80px;
 
   width: 100%;
   height: 100%;
-
   max-width: 1440px;
 
   margin: 0 auto;
 }
-
 
 /* =========================================================
    CONTENT
@@ -41,87 +33,50 @@
 .home-about__eyebrow {
   display: flex;
   align-items: center;
-
   gap: vars.$spacing-3;
 
-  margin-bottom:
-    vars.$spacing-6;
+  margin-bottom: vars.$spacing-6;
 
-  color:
-    vars.$color-text-muted;
-
+  color: vars.$color-text-muted;
   font-size: 11px;
-
-  font-weight:
-    vars.$font-weight-semibold;
-
-  letter-spacing:
-    0.2em;
-
-  line-height:
-    1;
+  font-weight: vars.$font-weight-semibold;
+  letter-spacing: 0.2em;
+  line-height: 1;
 }
 
 .home-about__eyebrow-line {
   width: 34px;
   height: 1px;
 
-  background:
-    vars.$color-primary;
-
-  box-shadow:
-    0 0 8px
-    rgba(99, 102, 241, 0.35);
+  background: vars.$color-primary;
+  box-shadow: 0 0 8px rgba(99, 102, 241, 0.35);
 }
 
 .home-about__title {
   margin: 0;
 
-  color:
-    vars.$color-text;
-
-  font-family:
-    vars.$font-family-heading;
-
-  font-size:
-    clamp(52px, 6vw, 88px);
-
-  font-weight:
-    vars.$font-weight-extrabold;
-
-  letter-spacing:
-    -0.055em;
-
-  line-height:
-    0.96;
+  color: vars.$color-text;
+  font-family: vars.$font-family-heading;
+  font-size: clamp(52px, 6vw, 88px);
+  font-weight: vars.$font-weight-extrabold;
+  letter-spacing: -0.055em;
+  line-height: 0.96;
 }
 
 .home-about__title span {
   display: block;
-
-  color:
-    vars.$color-text-light;
+  color: vars.$color-text-light;
 }
 
 .home-about__description {
   max-width: 560px;
+  margin: vars.$spacing-8 0 0;
 
-  margin:
-    vars.$spacing-8 0 0;
-
-  color:
-    vars.$color-text-muted;
-
-  font-size:
-    vars.$font-size-md;
-
-  font-weight:
-    vars.$font-weight-regular;
-
-  line-height:
-    1.75;
+  color: vars.$color-text-muted;
+  font-size: vars.$font-size-md;
+  font-weight: vars.$font-weight-regular;
+  line-height: 1.75;
 }
-
 
 /* =========================================================
    ACTIONS
@@ -130,53 +85,33 @@
 .home-about__actions {
   display: flex;
   align-items: center;
+  gap: vars.$spacing-6;
 
-  gap:
-    vars.$spacing-6;
-
-  margin-top:
-    vars.$spacing-8;
+  margin-top: vars.$spacing-8;
 }
 
 .home-about__primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: vars.$spacing-3;
 
-  gap:
-    vars.$spacing-3;
-
-  min-height:
-    48px;
-
-  padding:
-    0 vars.$spacing-6;
+  min-height: 48px;
+  padding: 0 vars.$spacing-6;
 
   border: 0;
+  border-radius: vars.$radius-full;
 
-  border-radius:
-    vars.$radius-full;
+  background: vars.$color-primary;
+  color: vars.$color-text-white;
 
-  background:
-    vars.$color-primary;
-
-  color:
-    vars.$color-text-white;
-
-  font-family:
-    vars.$font-family-base;
-
-  font-size:
-    vars.$font-size-sm;
-
-  font-weight:
-    vars.$font-weight-semibold;
+  font-family: vars.$font-family-base;
+  font-size: vars.$font-size-sm;
+  font-weight: vars.$font-weight-semibold;
 
   cursor: pointer;
 
-  box-shadow:
-    0 12px 30px
-    rgba(99, 102, 241, 0.2);
+  box-shadow: 0 12px 30px rgba(99, 102, 241, 0.2);
 
   transition:
     background vars.$transition-base,
@@ -185,66 +120,43 @@
 }
 
 .home-about__primary:hover {
-  background:
-    vars.$color-primary-hover;
-
-  transform:
-    translateY(-1px);
-
-  box-shadow:
-    0 16px 36px
-    rgba(99, 102, 241, 0.26);
+  background: vars.$color-primary-hover;
+  transform: translateY(-1px);
+  box-shadow: 0 16px 36px rgba(99, 102, 241, 0.26);
 }
 
 .home-about__primary:active {
-  transform:
-    translateY(0);
+  transform: translateY(0);
 }
 
 .home-about__primary:focus-visible {
-  outline:
-    0;
-
+  outline: 0;
   box-shadow:
     vars.$focus-ring,
-    0 12px 30px
-    rgba(99, 102, 241, 0.2);
+    0 12px 30px rgba(99, 102, 241, 0.2);
 }
 
 .home-about__signal {
   display: flex;
   align-items: center;
+  gap: vars.$spacing-2;
 
-  gap:
-    vars.$spacing-2;
-
-  color:
-    vars.$color-text-muted;
-
-  font-size:
-    vars.$font-size-xs;
-
-  font-weight:
-    vars.$font-weight-medium;
+  color: vars.$color-text-muted;
+  font-size: vars.$font-size-xs;
+  font-weight: vars.$font-weight-medium;
 }
 
 .home-about__signal-dot {
+  flex: 0 0 auto;
+
   width: 6px;
   height: 6px;
 
-  flex: 0 0 auto;
+  border-radius: vars.$radius-full;
+  background: vars.$color-success;
 
-  border-radius:
-    vars.$radius-full;
-
-  background:
-    vars.$color-success;
-
-  box-shadow:
-    0 0 8px
-    rgba(34, 197, 94, 0.45);
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.45);
 }
-
 
 /* =========================================================
    VISUAL
@@ -267,59 +179,44 @@
   width: 310px;
   height: 310px;
 
-  border-radius:
-    vars.$radius-full;
+  border-radius: vars.$radius-full;
 
-  background:
-    radial-gradient(
-      circle,
-      rgba(99, 102, 241, 0.13),
-      rgba(99, 102, 241, 0.025) 58%,
-      transparent 72%
-    );
+  background: radial-gradient(
+    circle,
+    rgba(99, 102, 241, 0.13),
+    rgba(99, 102, 241, 0.025) 58%,
+    transparent 72%
+  );
 
-  filter:
-    blur(4px);
+  filter: blur(4px);
 }
 
 .home-about__ring {
   position: absolute;
 
-  border:
-    1px solid
-    rgba(99, 102, 241, 0.12);
+  border: 1px solid rgba(99, 102, 241, 0.12);
+  border-radius: vars.$radius-full;
 
-  border-radius:
-    vars.$radius-full;
-
-  transform:
-    rotate(-12deg);
+  transform: rotate(-12deg);
 }
 
 .home-about__ring--outer {
   width: 440px;
   height: 440px;
-
-  border-color:
-    rgba(99, 102, 241, 0.09);
+  border-color: rgba(99, 102, 241, 0.09);
 }
 
 .home-about__ring--middle {
   width: 350px;
   height: 350px;
-
-  border-color:
-    rgba(99, 102, 241, 0.14);
+  border-color: rgba(99, 102, 241, 0.14);
 }
 
 .home-about__ring--inner {
   width: 270px;
   height: 270px;
-
-  border-color:
-    rgba(99, 102, 241, 0.2);
+  border-color: rgba(99, 102, 241, 0.2);
 }
-
 
 /* =========================================================
    PULSE CARD
@@ -330,25 +227,15 @@
   z-index: 2;
 
   width: 350px;
+  padding: vars.$spacing-6;
 
-  padding:
-    vars.$spacing-6;
+  border: 1px solid vars.$color-border;
+  border-radius: vars.$radius-2xl;
 
-  border:
-    1px solid
-    vars.$color-border;
+  background: vars.$color-surface;
+  box-shadow: vars.$shadow-lg;
 
-  border-radius:
-    vars.$radius-2xl;
-
-  background:
-    vars.$color-surface;
-
-  box-shadow:
-    vars.$shadow-lg;
-
-  backdrop-filter:
-    blur(20px);
+  backdrop-filter: blur(20px);
 }
 
 .home-about__pulse-header,
@@ -359,52 +246,35 @@
 }
 
 .home-about__pulse-header {
-  color:
-    vars.$color-text-muted;
-
+  color: vars.$color-text-muted;
   font-size: 9px;
-
-  font-weight:
-    vars.$font-weight-semibold;
-
-  letter-spacing:
-    0.17em;
+  font-weight: vars.$font-weight-semibold;
+  letter-spacing: 0.17em;
 }
 
 .home-about__pulse-live {
-  color:
-    vars.$color-success;
-
-  font-size:
-    8px;
+  color: vars.$color-success;
+  font-size: 8px;
 }
 
 .home-about__wave {
   display: flex;
   align-items: center;
-
   gap: 5px;
 
   height: 100px;
-
-  margin:
-    18px 0;
+  margin: 18px 0;
 }
 
 .home-about__wave span {
-  width: 4px;
-
   flex: 0 0 4px;
 
-  border-radius:
-    vars.$radius-full;
+  width: 4px;
 
-  background:
-    vars.$color-primary;
+  border-radius: vars.$radius-full;
+  background: vars.$color-primary;
 
-  box-shadow:
-    0 0 8px
-    rgba(99, 102, 241, 0.3);
+  box-shadow: 0 0 8px rgba(99, 102, 241, 0.3);
 }
 
 .home-about__wave span:nth-child(1),
@@ -453,26 +323,15 @@
 }
 
 .home-about__pulse-footer {
-  padding-top:
-    14px;
+  padding-top: 14px;
 
-  border-top:
-    1px solid
-    vars.$color-border-light;
+  border-top: 1px solid vars.$color-border-light;
 
-  color:
-    vars.$color-text-light;
-
-  font-size:
-    8px;
-
-  font-weight:
-    vars.$font-weight-semibold;
-
-  letter-spacing:
-    0.14em;
+  color: vars.$color-text-light;
+  font-size: 8px;
+  font-weight: vars.$font-weight-semibold;
+  letter-spacing: 0.14em;
 }
-
 
 /* =========================================================
    FLOATING CARDS
@@ -484,28 +343,17 @@
 
   display: flex;
   align-items: center;
+  gap: vars.$spacing-3;
 
-  gap:
-    vars.$spacing-3;
+  padding: 12px 15px;
 
-  padding:
-    12px 15px;
+  border: 1px solid vars.$color-border;
+  border-radius: vars.$radius-lg;
 
-  border:
-    1px solid
-    vars.$color-border;
+  background: rgba(255, 255, 255, 0.94);
 
-  border-radius:
-    vars.$radius-lg;
-
-  background:
-    rgba(255, 255, 255, 0.94);
-
-  backdrop-filter:
-    blur(18px);
-
-  box-shadow:
-    vars.$shadow-md;
+  backdrop-filter: blur(18px);
+  box-shadow: vars.$shadow-md;
 }
 
 .home-about__floating-card--top {
@@ -526,45 +374,29 @@
   width: 30px;
   height: 30px;
 
-  border-radius:
-    10px;
+  border-radius: 10px;
+  background: vars.$color-primary-light;
+  color: vars.$color-primary;
 
-  background:
-    vars.$color-primary-light;
-
-  color:
-    vars.$color-primary;
-
-  font-size:
-    13px;
+  font-size: 13px;
 }
 
 .home-about__floating-card div {
   display: flex;
   flex-direction: column;
-
   gap: 3px;
 }
 
 .home-about__floating-card strong {
-  color:
-    vars.$color-text;
-
-  font-size:
-    11px;
-
-  font-weight:
-    vars.$font-weight-semibold;
+  color: vars.$color-text;
+  font-size: 11px;
+  font-weight: vars.$font-weight-semibold;
 }
 
 .home-about__floating-card span {
-  color:
-    vars.$color-text-light;
-
-  font-size:
-    9px;
+  color: vars.$color-text-light;
+  font-size: 9px;
 }
-
 
 /* =========================================================
    XXL DEVICES
@@ -573,13 +405,11 @@
 
 @include xxl {
   .home-about {
-    gap:
-      50px;
+    gap: 50px;
   }
 
   .home-about__title {
-    font-size:
-      clamp(50px, 5.8vw, 78px);
+    font-size: clamp(50px, 5.8vw, 78px);
   }
 
   .home-about__ring--outer {
@@ -588,7 +418,6 @@
   }
 }
 
-
 /* =========================================================
    XL DEVICES
    ≤ 1200px
@@ -596,25 +425,18 @@
 
 @include xl {
   .home-about {
-    grid-template-columns:
-      minmax(0, 1fr)
-      minmax(360px, 0.8fr);
-
-    gap:
-      30px;
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 0.8fr);
+    gap: 30px;
   }
 
   .home-about__visual {
-    transform:
-      scale(0.9);
+    transform: scale(0.9);
   }
 
   .home-about__floating-card--top {
-    right:
-      0;
+    right: 0;
   }
 }
-
 
 /* =========================================================
    LG DEVICES
@@ -623,30 +445,22 @@
 
 @include lg {
   .home-about {
-    grid-template-columns:
-      minmax(0, 1fr)
-      minmax(300px, 0.72fr);
-
-    gap:
-      15px;
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.72fr);
+    gap: 15px;
   }
 
   .home-about__title {
-    font-size:
-      clamp(46px, 6vw, 64px);
+    font-size: clamp(46px, 6vw, 64px);
   }
 
   .home-about__description {
-    font-size:
-      vars.$font-size-sm;
+    font-size: vars.$font-size-sm;
   }
 
   .home-about__visual {
-    transform:
-      scale(0.78);
+    transform: scale(0.78);
   }
 }
-
 
 /* =========================================================
    MD DEVICES
@@ -655,48 +469,34 @@
 
 @include md {
   .home-about {
-    grid-template-columns:
-      1fr;
-
-    gap:
-      0;
+    grid-template-columns: 1fr;
+    gap: 0;
   }
 
   .home-about__content {
-    max-width:
-      650px;
+    max-width: 650px;
+    margin: 0 auto;
 
-    margin:
-      0 auto;
-
-    text-align:
-      center;
+    text-align: center;
   }
 
   .home-about__eyebrow {
-    justify-content:
-      center;
+    justify-content: center;
   }
 
   .home-about__description {
-    margin-right:
-      auto;
-
-    margin-left:
-      auto;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .home-about__actions {
-    justify-content:
-      center;
+    justify-content: center;
   }
 
   .home-about__visual {
-    display:
-      none;
+    display: none;
   }
 }
-
 
 /* =========================================================
    SM DEVICES
@@ -705,30 +505,20 @@
 
 @include sm {
   .home-about__title {
-    font-size:
-      46px;
+    font-size: 46px;
   }
 
   .home-about__description {
-    margin-top:
-      vars.$spacing-6;
-
-    font-size:
-      vars.$font-size-sm;
+    margin-top: vars.$spacing-6;
+    font-size: vars.$font-size-sm;
   }
 
   .home-about__actions {
-    flex-direction:
-      column;
-
-    gap:
-      vars.$spacing-4;
-
-    margin-top:
-      vars.$spacing-6;
+    flex-direction: column;
+    gap: vars.$spacing-4;
+    margin-top: vars.$spacing-6;
   }
 }
-
 
 /* =========================================================
    XS DEVICES
@@ -737,24 +527,18 @@
 
 @include xs {
   .home-about__title {
-    font-size:
-      39px;
+    font-size: 39px;
   }
 
   .home-about__description {
-    font-size:
-      vars.$font-size-xs;
-
-    line-height:
-      1.65;
+    font-size: vars.$font-size-xs;
+    line-height: 1.65;
   }
 
   .home-about__primary {
-    min-height:
-      44px;
+    min-height: 44px;
   }
 }
-
 
 /* =========================================================
    XXS DEVICES
@@ -763,12 +547,10 @@
 
 @include xxs {
   .home-about__title {
-    font-size:
-      34px;
+    font-size: 34px;
   }
 
   .home-about__eyebrow {
-    font-size:
-      9px;
+    font-size: 9px;
   }
 }
