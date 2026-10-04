@@ -1,0 +1,250 @@
+/* =========================================================
+   PULSE - TOAST STYLES
+========================================================= */
+
+@use "../abstracts/variables" as vars;
+@use "../abstracts/breakpoints" as *;
+
+
+/* =========================================================
+   TOAST CONTAINER
+========================================================= */
+
+.Toastify__toast-container {
+  width: 380px;
+  padding: 16px;
+
+  z-index: vars.$z-index-toast;
+}
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+.Toastify__toast {
+  min-height: 58px;
+  margin-bottom: 12px;
+  padding: 12px 14px;
+
+  border: 1px solid transparent;
+  border-radius: vars.$radius-lg;
+
+  font-family: vars.$font-family-base;
+  font-size: vars.$font-size-sm;
+  font-weight: vars.$font-weight-medium;
+
+  box-shadow: vars.$shadow-lg;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   TOAST BODY
+========================================================= */
+
+.Toastify__toast-body {
+  margin: 0;
+  padding: 0;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   TOAST ICON
+========================================================= */
+
+.Toastify__toast-icon {
+  width: 20px;
+  margin-inline-end: 10px;
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
+.Toastify__close-button {
+  top: 12px;
+  right: 12px;
+
+  opacity: 0.5;
+
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   PROGRESS BAR
+========================================================= */
+
+.Toastify__progress-bar {
+  height: 3px;
+}
+
+
+/* =========================================================
+   SUCCESS
+========================================================= */
+
+.Toastify__toast--success {
+  border-color: #b7e4c7;
+  background-color: #f0fdf4;
+  color: #166534;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.Toastify__toast--error {
+  border-color: #fecaca;
+  background-color: #fef2f2;
+  color: #b91c1c;
+}
+
+
+/* =========================================================
+   WARNING
+========================================================= */
+
+.Toastify__toast--warning {
+  border-color: #fde68a;
+  background-color: #fffbeb;
+  color: #92400e;
+}
+
+
+/* =========================================================
+   INFO
+========================================================= */
+
+.Toastify__toast--info {
+  border-color: #bfdbfe;
+  background-color: #eff6ff;
+  color: #1d4ed8;
+}
+
+
+/* =========================================================
+   XXL DEVICES
+   ≤ 1400px
+========================================================= */
+
+@include xxl {
+  .Toastify__toast-container {
+    width: 360px;
+  }
+}
+
+
+/* =========================================================
+   XL DEVICES
+   ≤ 1200px
+========================================================= */
+
+@include xl {
+  .Toastify__toast-container {
+    width: 350px;
+  }
+}
+
+
+/* =========================================================
+   LG DEVICES
+   ≤ 992px
+========================================================= */
+
+@include lg {
+  .Toastify__toast-container {
+    width: 340px;
+  }
+}
+
+
+/* =========================================================
+   MD DEVICES
+   ≤ 768px
+========================================================= */
+
+@include md {
+  .Toastify__toast-container {
+    width: 320px;
+    padding: 14px;
+  }
+
+  .Toastify__toast {
+    min-height: 56px;
+  }
+}
+
+
+/* =========================================================
+   SM DEVICES
+   ≤ 576px
+========================================================= */
+
+@include sm {
+  .Toastify__toast-container {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .Toastify__toast {
+    margin-bottom: 8px;
+    border-radius: vars.$radius-md;
+  }
+}
+
+
+/* =========================================================
+   XS DEVICES
+   ≤ 480px
+========================================================= */
+
+@include xs {
+  .Toastify__toast-container {
+    padding: 10px;
+  }
+
+  .Toastify__toast {
+    min-height: 52px;
+    padding: 10px 12px;
+
+    font-size: vars.$font-size-xs;
+  }
+}
+
+
+/* =========================================================
+   XXS DEVICES
+   ≤ 320px
+========================================================= */
+
+@include xxs {
+  .Toastify__toast-container {
+    padding: 8px;
+  }
+
+  .Toastify__toast {
+    min-height: 48px;
+    margin-bottom: 6px;
+    padding: 8px 10px;
+
+    border-radius: vars.$radius-sm;
+
+    font-size: 12px;
+  }
+
+  .Toastify__toast-icon {
+    width: 18px;
+    margin-inline-end: 8px;
+  }
+}
