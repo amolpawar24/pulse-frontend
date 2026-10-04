@@ -1,0 +1,38 @@
+// ========================================
+// Pulse - Main SCSS Entry Point
+// ========================================
+
+// ----------------------------------------
+// Abstracts
+// Variables, mixins, and functions
+// ----------------------------------------
+
+@use "./abstracts/mixins";
+@use "./abstracts/functions";
+
+// ----------------------------------------
+// Base
+// Reset, typography, and global styles
+// ----------------------------------------
+
+@use "./base/reset";
+@use "./base/typography";
+// @use "./base/global";
+
+// ----------------------------------------
+// Components
+// Themes
+// Reusable component styles
+// ----------------------------------------
+@use "./components/toast";
+@use "./components/pulseStatus/pulseMark";
+// @use "./components/themes/themes.index";
+
+// ----------------------------------------
+// Features
+// Feature-specific styles
+// ----------------------------------------
+@use "./pages/auth/auth.index";
+
+@use "./pages/home/home.index";
+@use "./pages/chat/chat.index";
