@@ -1,0 +1,603 @@
+@use "../../../abstracts/variables" as vars;
+@use "../../../abstracts/breakpoints" as *;
+
+
+/* =========================================================
+   PULSE - HOME NAVBAR
+========================================================= */
+
+
+/* =========================================================
+   PULSE LETTER FLASH ANIMATION
+
+   P → U → L → S → E
+
+   Only brightness + glow.
+   No movement.
+========================================================= */
+
+@keyframes homeNavbarLetterFlash {
+  0% {
+    filter: brightness(1);
+  }
+
+  3% {
+    filter: brightness(1);
+  }
+
+  7% {
+    filter:
+      brightness(1.8)
+      drop-shadow(0 0 4px rgba(255, 255, 255, 0.8))
+      drop-shadow(0 0 10px vars.$color-primary)
+      drop-shadow(0 0 18px rgba(99, 102, 241, 0.5));
+  }
+
+  10% {
+    filter:
+      brightness(1.3)
+      drop-shadow(0 0 6px vars.$color-primary);
+  }
+
+  14% {
+    filter: brightness(1);
+  }
+
+  100% {
+    filter: brightness(1);
+  }
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.home-navbar {
+  position: relative;
+  z-index: vars.$z-index-sticky;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  flex: 0 0 auto;
+
+  width: calc(100% - 144px);
+  min-height: 88px;
+
+  margin: 0 auto;
+
+  border-bottom: 1px solid
+    rgba(15, 23, 42, 0.06);
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.home-navbar__brand {
+  display: inline-flex;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  color: vars.$color-text;
+
+  font-family: vars.$font-family-heading;
+  font-size: 29px;
+  font-weight: vars.$font-weight-extrabold;
+  letter-spacing: 0.17em;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    color vars.$transition-base,
+    opacity vars.$transition-base;
+}
+
+.home-navbar__brand:hover {
+  color: vars.$color-primary;
+}
+
+.home-navbar__brand:focus-visible {
+  border-radius: vars.$radius-sm;
+
+  box-shadow:
+    vars.$focus-ring;
+}
+
+
+/* =========================================================
+   PULSE LETTERS
+========================================================= */
+
+.home-navbar__letter {
+  display: inline-block;
+
+  /*
+   * Letters stay completely stationary.
+   * Only brightness and glow are animated.
+   */
+  animation-name: homeNavbarLetterFlash;
+  animation-duration: 3.2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+
+/* =========================================================
+   P
+========================================================= */
+
+.home-navbar__letter:nth-child(1) {
+  animation-delay: 0s;
+}
+
+
+/* =========================================================
+   U
+========================================================= */
+
+.home-navbar__letter:nth-child(2) {
+  animation-delay: 0.25s;
+}
+
+
+/* =========================================================
+   L
+========================================================= */
+
+.home-navbar__letter:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+
+/* =========================================================
+   S
+========================================================= */
+
+.home-navbar__letter:nth-child(4) {
+  animation-delay: 0.75s;
+}
+
+
+/* =========================================================
+   E
+========================================================= */
+
+.home-navbar__letter:nth-child(5) {
+  animation-delay: 1s;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.home-navbar__navigation {
+  display: flex;
+  align-items: center;
+
+  gap: vars.$spacing-8;
+}
+
+
+/* =========================================================
+   NAVIGATION LINK
+========================================================= */
+
+.home-navbar__link {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 42px;
+
+  margin: 0;
+  padding:
+    0
+    vars.$spacing-2;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  color: vars.$color-text-muted;
+
+  font-family: vars.$font-family-base;
+  font-size: vars.$font-size-sm;
+  font-weight: vars.$font-weight-medium;
+  letter-spacing: 0.01em;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    color vars.$transition-base,
+    opacity vars.$transition-base;
+}
+
+.home-navbar__link:hover {
+  color: vars.$color-text;
+}
+
+.home-navbar__link:focus-visible {
+  border-radius: vars.$radius-sm;
+
+  box-shadow:
+    vars.$focus-ring;
+}
+
+.home-navbar__link--active {
+  color: vars.$color-text;
+}
+
+
+/* =========================================================
+   ACTIVE ECG INDICATOR
+========================================================= */
+
+.home-navbar__pulse {
+  position: absolute;
+
+  right: 50%;
+  bottom: -2px;
+
+  width: 38px;
+  height: 9px;
+
+  transform: translateX(50%);
+
+  pointer-events: none;
+}
+
+.home-navbar__pulse::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    vars.$color-primary;
+
+  clip-path: polygon(
+    0 46%,
+    30% 46%,
+    39% 46%,
+    46% 5%,
+    53% 95%,
+    61% 46%,
+    100% 46%,
+    100% 62%,
+    64% 62%,
+    54% 100%,
+    45% 18%,
+    41% 62%,
+    0 62%
+  );
+
+  filter:
+    drop-shadow(
+      0 0 5px
+      rgba(99, 102, 241, 0.55)
+    );
+}
+
+
+/* =========================================================
+   SIGN IN
+========================================================= */
+
+.home-navbar__signin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 40px;
+
+  margin: 0;
+
+  padding:
+    0
+    vars.$spacing-5;
+
+  border: 1px solid
+    vars.$color-border;
+
+  border-radius:
+    vars.$radius-full;
+
+  outline: 0;
+
+  background:
+    vars.$color-surface;
+
+  color:
+    vars.$color-text;
+
+  font-family:
+    vars.$font-family-base;
+
+  font-size:
+    vars.$font-size-sm;
+
+  font-weight:
+    vars.$font-weight-medium;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  box-shadow:
+    vars.$shadow-xs;
+
+  transition:
+    background vars.$transition-base,
+    border-color vars.$transition-base,
+    color vars.$transition-base,
+    box-shadow vars.$transition-base,
+    transform vars.$transition-base;
+}
+
+.home-navbar__signin:hover {
+  border-color:
+    vars.$color-border-hover;
+
+  background:
+    vars.$color-surface-hover;
+
+  color:
+    vars.$color-primary;
+
+  box-shadow:
+    vars.$shadow-sm;
+}
+
+.home-navbar__signin:active {
+  transform:
+    translateY(1px);
+}
+
+.home-navbar__signin:focus-visible {
+  box-shadow:
+    vars.$focus-ring;
+}
+
+
+/* =========================================================
+   XXL DEVICES
+   ≤ 1400px
+========================================================= */
+
+@include xxl {
+  .home-navbar {
+    width:
+      calc(100% - 112px);
+  }
+}
+
+
+/* =========================================================
+   XL DEVICES
+   ≤ 1200px
+========================================================= */
+
+@include xl {
+  .home-navbar {
+    width:
+      calc(100% - 80px);
+  }
+
+  .home-navbar__navigation {
+    gap:
+      vars.$spacing-6;
+  }
+}
+
+
+/* =========================================================
+   LG DEVICES
+   ≤ 992px
+========================================================= */
+
+@include lg {
+  .home-navbar {
+    width:
+      calc(100% - 56px);
+  }
+
+  .home-navbar__navigation {
+    gap:
+      vars.$spacing-4;
+  }
+}
+
+
+/* =========================================================
+   MD DEVICES
+   ≤ 768px
+========================================================= */
+
+@include md {
+  .home-navbar {
+    width:
+      calc(100% - 40px);
+
+    min-height:
+      74px;
+  }
+
+  .home-navbar__brand {
+    font-size:
+      24px;
+  }
+
+  .home-navbar__navigation {
+    gap:
+      vars.$spacing-2;
+  }
+
+  .home-navbar__link {
+    height:
+      40px;
+
+    padding-right:
+      6px;
+
+    padding-left:
+      6px;
+  }
+
+  .home-navbar__signin {
+    height:
+      38px;
+
+    padding-right:
+      vars.$spacing-4;
+
+    padding-left:
+      vars.$spacing-4;
+  }
+}
+
+
+/* =========================================================
+   SM DEVICES
+   ≤ 576px
+========================================================= */
+
+@include sm {
+  .home-navbar {
+    width:
+      calc(100% - 28px);
+
+    min-height:
+      68px;
+  }
+
+  .home-navbar__brand {
+    font-size:
+      21px;
+
+    letter-spacing:
+      0.13em;
+  }
+
+  .home-navbar__navigation {
+    gap:
+      2px;
+  }
+
+  .home-navbar__link {
+    font-size:
+      vars.$font-size-xs;
+  }
+
+  .home-navbar__signin {
+    padding-right:
+      vars.$spacing-3;
+
+    padding-left:
+      vars.$spacing-3;
+  }
+}
+
+
+/* =========================================================
+   XS DEVICES
+   ≤ 480px
+========================================================= */
+
+@include xs {
+  .home-navbar {
+    width:
+      calc(100% - 18px);
+  }
+
+  .home-navbar__brand {
+    font-size:
+      19px;
+  }
+
+  .home-navbar__link {
+    padding-right:
+      4px;
+
+    padding-left:
+      4px;
+  }
+
+  .home-navbar__signin {
+    height:
+      36px;
+
+    padding-right:
+      vars.$spacing-2;
+
+    padding-left:
+      vars.$spacing-2;
+  }
+}
+
+
+/* =========================================================
+   XXS DEVICES
+   ≤ 320px
+========================================================= */
+
+@include xxs {
+  .home-navbar {
+    width:
+      calc(100% - 12px);
+  }
+
+  .home-navbar__brand {
+    font-size:
+      17px;
+
+    letter-spacing:
+      0.1em;
+  }
+
+  .home-navbar__link {
+    font-size:
+      11px;
+  }
+
+  .home-navbar__signin {
+    padding-right:
+      7px;
+
+    padding-left:
+      7px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .home-navbar__letter {
+    animation: none;
+  }
+
+  .home-navbar__link,
+  .home-navbar__signin,
+  .home-navbar__brand {
+    transition: none;
+  }
+}
