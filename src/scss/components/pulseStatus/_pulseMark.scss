@@ -1,0 +1,66 @@
+@use "../../abstracts/variables" as vars;
+
+.pulse-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: vars.$color-primary;
+  line-height: 0;
+
+  &__icon {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &--xs {
+    width: 10px;
+    height: 10px;
+  }
+
+  &--sm {
+    width: 14px;
+    height: 14px;
+  }
+
+  &--md {
+    width: 20px;
+    height: 20px;
+  }
+
+  &--lg {
+    width: 28px;
+    height: 28px;
+  }
+
+  &--xl {
+    width: 40px;
+    height: 40px;
+  }
+
+  &--muted {
+    color: vars.$color-text-light;
+  }
+
+  &--animated {
+    animation: pulse-mark-glow 1.8s ease-in-out infinite;
+  }
+}
+
+@keyframes pulse-mark-glow {
+  0%,
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(
+      0 0 0 rgba(99, 102, 241, 0)
+    );
+  }
+
+  50% {
+    transform: scale(1.08);
+    filter: drop-shadow(
+      0 0 6px rgba(99, 102, 241, 0.35)
+    );
+  }
+}
