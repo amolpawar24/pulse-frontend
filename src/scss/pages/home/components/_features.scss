@@ -1,11 +1,9 @@
 @use "../../../abstracts/variables" as vars;
 @use "../../../abstracts/breakpoints" as *;
 
-
 /* =========================================================
    PULSE - HOME FEATURES
 ========================================================= */
-
 
 /* =========================================================
    FEATURES
@@ -17,14 +15,11 @@
 
   width: 100%;
   height: 100%;
-
   max-width: 1440px;
 
   margin: 0 auto;
-
   padding-top: 28px;
 }
-
 
 /* =========================================================
    INTRO
@@ -32,20 +27,17 @@
 
 .home-features__intro {
   max-width: 700px;
-
   margin-bottom: 34px;
 }
 
 .home-features__eyebrow {
   display: flex;
   align-items: center;
-
   gap: vars.$spacing-3;
 
   margin-bottom: vars.$spacing-4;
 
   color: vars.$color-text-muted;
-
   font-size: 10px;
   font-weight: vars.$font-weight-semibold;
   letter-spacing: 0.2em;
@@ -55,54 +47,33 @@
   width: 28px;
   height: 1px;
 
-  background:
-    vars.$color-primary;
+  background: vars.$color-primary;
 
-  box-shadow:
-    0 0 8px
-    rgba(99, 102, 241, 0.35);
+  box-shadow: 0 0 8px rgba(99, 102, 241, 0.35);
 }
 
 .home-features__title {
   margin: 0;
 
-  color:
-    vars.$color-text;
-
-  font-size:
-    clamp(38px, 4vw, 58px);
-
-  font-weight:
-    vars.$font-weight-extrabold;
-
-  letter-spacing:
-    -0.045em;
-
-  line-height:
-    1;
+  color: vars.$color-text;
+  font-size: clamp(38px, 4vw, 58px);
+  font-weight: vars.$font-weight-extrabold;
+  letter-spacing: -0.045em;
+  line-height: 1;
 }
 
 .home-features__title span {
-  color:
-    vars.$color-text-light;
+  color: vars.$color-text-light;
 }
 
 .home-features__description {
   max-width: 580px;
+  margin: vars.$spacing-5 0 0;
 
-  margin:
-    vars.$spacing-5 0 0;
-
-  color:
-    vars.$color-text-muted;
-
-  font-size:
-    vars.$font-size-sm;
-
-  line-height:
-    1.65;
+  color: vars.$color-text-muted;
+  font-size: vars.$font-size-sm;
+  line-height: 1.65;
 }
-
 
 /* =========================================================
    GRID
@@ -110,17 +81,12 @@
 
 .home-features__grid {
   display: grid;
-
-  grid-template-columns:
-    repeat(4, minmax(0, 1fr));
-
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 12px;
 
   flex: 1;
-
   min-height: 0;
 }
-
 
 /* =========================================================
    FEATURE CARD
@@ -133,22 +99,15 @@
   flex-direction: column;
 
   min-height: 0;
-
   padding: 22px;
 
   overflow: hidden;
 
-  border:
-    1px solid vars.$color-border;
+  border: 1px solid vars.$color-border;
+  border-radius: vars.$radius-xl;
 
-  border-radius:
-    vars.$radius-xl;
-
-  background:
-    vars.$color-surface;
-
-  box-shadow:
-    vars.$shadow-xs;
+  background: vars.$color-surface;
+  box-shadow: vars.$shadow-xs;
 
   transition:
     border-color vars.$transition-base,
@@ -158,37 +117,22 @@
 }
 
 .home-feature-card:hover {
-  border-color:
-    rgba(99, 102, 241, 0.28);
-
-  background:
-    vars.$color-surface;
-
-  box-shadow:
-    vars.$shadow-md;
-
-  transform:
-    translateY(-3px);
+  border-color: rgba(99, 102, 241, 0.28);
+  background: vars.$color-surface;
+  box-shadow: vars.$shadow-md;
+  transform: translateY(-3px);
 }
-
 
 /* =========================================================
    CARD NUMBER
 ========================================================= */
 
 .home-feature-card__number {
-  color:
-    vars.$color-text-light;
-
+  color: vars.$color-text-light;
   font-size: 10px;
-
-  font-weight:
-    vars.$font-weight-semibold;
-
-  letter-spacing:
-    0.14em;
+  font-weight: vars.$font-weight-semibold;
+  letter-spacing: 0.14em;
 }
-
 
 /* =========================================================
    CARD ICON
@@ -205,24 +149,16 @@
   margin-top: auto;
   margin-bottom: 24px;
 
-  border:
-    1px solid rgba(99, 102, 241, 0.16);
+  border: 1px solid rgba(99, 102, 241, 0.16);
+  border-radius: vars.$radius-lg;
 
-  border-radius:
-    vars.$radius-lg;
-
-  background:
-    vars.$color-primary-light;
-
-  color:
-    vars.$color-primary;
+  background: vars.$color-primary-light;
+  color: vars.$color-primary;
 
   font-size: 21px;
 
-  box-shadow:
-    0 8px 20px rgba(99, 102, 241, 0.08);
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.08);
 }
-
 
 /* =========================================================
    CARD BODY
@@ -231,33 +167,19 @@
 .home-feature-card__body h2 {
   margin: 0;
 
-  color:
-    vars.$color-text;
-
-  font-size:
-    vars.$font-size-md;
-
-  font-weight:
-    vars.$font-weight-semibold;
-
-  letter-spacing:
-    -0.01em;
+  color: vars.$color-text;
+  font-size: vars.$font-size-md;
+  font-weight: vars.$font-weight-semibold;
+  letter-spacing: -0.01em;
 }
 
 .home-feature-card__body p {
-  margin:
-    vars.$spacing-3 0 0;
+  margin: vars.$spacing-3 0 0;
 
-  color:
-    vars.$color-text-muted;
-
-  font-size:
-    vars.$font-size-xs;
-
-  line-height:
-    1.65;
+  color: vars.$color-text-muted;
+  font-size: vars.$font-size-xs;
+  line-height: 1.65;
 }
-
 
 /* =========================================================
    CARD LINE
@@ -265,23 +187,20 @@
 
 .home-feature-card__line {
   position: absolute;
-
   right: 22px;
   bottom: 22px;
   left: 22px;
 
   height: 1px;
 
-  background:
-    linear-gradient(
-      90deg,
-      rgba(99, 102, 241, 0.3),
-      transparent
-    );
+  background: linear-gradient(
+    90deg,
+    rgba(99, 102, 241, 0.3),
+    transparent
+  );
 
   opacity: 0.55;
 }
-
 
 /* =========================================================
    XXL DEVICES
@@ -290,16 +209,13 @@
 
 @include xxl {
   .home-features {
-    padding-top:
-      20px;
+    padding-top: 20px;
   }
 
   .home-feature-card {
-    padding:
-      19px;
+    padding: 19px;
   }
 }
-
 
 /* =========================================================
    XL DEVICES
@@ -308,21 +224,17 @@
 
 @include xl {
   .home-features__grid {
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .home-feature-card {
-    min-height:
-      180px;
+    min-height: 180px;
   }
 
   .home-feature-card__icon {
-    margin-top:
-      30px;
+    margin-top: 30px;
   }
 }
-
 
 /* =========================================================
    LG DEVICES
@@ -331,21 +243,17 @@
 
 @include lg {
   .home-features__title {
-    font-size:
-      42px;
+    font-size: 42px;
   }
 
   .home-features__intro {
-    margin-bottom:
-      24px;
+    margin-bottom: 24px;
   }
 
   .home-feature-card {
-    min-height:
-      165px;
+    min-height: 165px;
   }
 }
-
 
 /* =========================================================
    MD DEVICES
@@ -354,37 +262,27 @@
 
 @include md {
   .home-features {
-    padding-top:
-      12px;
+    padding-top: 12px;
   }
 
   .home-features__grid {
-    gap:
-      8px;
+    gap: 8px;
   }
 
   .home-feature-card {
-    padding:
-      16px;
+    padding: 16px;
   }
 
   .home-feature-card__icon {
-    width:
-      40px;
-
-    height:
-      40px;
-
-    margin-bottom:
-      15px;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 15px;
   }
 
   .home-feature-card__body p {
-    margin-top:
-      6px;
+    margin-top: 6px;
   }
 }
-
 
 /* =========================================================
    SM DEVICES
@@ -393,44 +291,34 @@
 
 @include sm {
   .home-features__grid {
-    grid-template-columns:
-      1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .home-features__title {
-    font-size:
-      34px;
+    font-size: 34px;
   }
 
   .home-features__description {
-    font-size:
-      vars.$font-size-xs;
+    font-size: vars.$font-size-xs;
   }
 
   .home-feature-card {
-    min-height:
-      145px;
-
-    padding:
-      13px;
+    min-height: 145px;
+    padding: 13px;
   }
 
   .home-feature-card__number {
-    font-size:
-      9px;
+    font-size: 9px;
   }
 
   .home-feature-card__body h2 {
-    font-size:
-      vars.$font-size-sm;
+    font-size: vars.$font-size-sm;
   }
 
   .home-feature-card__body p {
-    font-size:
-      11px;
+    font-size: 11px;
   }
 }
-
 
 /* =========================================================
    XS DEVICES
@@ -439,51 +327,32 @@
 
 @include xs {
   .home-features__title {
-    font-size:
-      30px;
-  }
-
-  .home-features__grid {
-    grid-template-columns:
-      1fr 1fr;
+    font-size: 30px;
   }
 
   .home-feature-card {
-    min-height:
-      130px;
-
-    padding:
-      11px;
+    min-height: 130px;
+    padding: 11px;
   }
 
   .home-feature-card__icon {
-    width:
-      34px;
+    width: 34px;
+    height: 34px;
 
-    height:
-      34px;
+    margin-bottom: 10px;
 
-    margin-bottom:
-      10px;
-
-    border-radius:
-      10px;
-
-    font-size:
-      16px;
+    border-radius: 10px;
+    font-size: 16px;
   }
 
   .home-feature-card__body h2 {
-    font-size:
-      12px;
+    font-size: 12px;
   }
 
   .home-feature-card__body p {
-    display:
-      none;
+    display: none;
   }
 }
-
 
 /* =========================================================
    XXS DEVICES
@@ -492,12 +361,10 @@
 
 @include xxs {
   .home-features__title {
-    font-size:
-      26px;
+    font-size: 26px;
   }
 
   .home-feature-card {
-    min-height:
-      115px;
+    min-height: 115px;
   }
 }
