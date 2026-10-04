@@ -1,0 +1,21 @@
+/* =========================================================
+   PULSE - LIGHT THEME
+========================================================= */
+
+[data-theme-mode="light"] {
+  color-scheme: light;
+
+  --pulse-color-background: #f7f8fc;
+  --pulse-color-surface: #ffffff;
+  --pulse-color-surface-raised: #ffffff;
+
+  --pulse-color-text-primary: #111827;
+  --pulse-color-text-secondary: rgba(17, 24, 39, 0.68);
+  --pulse-color-text-muted: rgba(17, 24, 39, 0.45);
+
+  --pulse-color-border: rgba(17, 24, 39, 0.08);
+  --pulse-color-border-strong: rgba(17, 24, 39, 0.14);
+
+  --pulse-color-input: rgba(17, 24, 39, 0.045);
+  --pulse-color-shadow: rgba(17, 24, 39, 0.12);
+}
