@@ -1,0 +1,210 @@
+@use "../abstracts/variables" as vars;
+
+/* =========================================================
+   PULSE - BASE STYLES
+========================================================= */
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+html {
+  width: 100%;
+  min-height: 100%;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  background-color: vars.$color-background;
+  color: vars.$color-text;
+
+  font-family: vars.$font-family-base;
+  font-size: vars.$font-size-md;
+  font-weight: vars.$font-weight-regular;
+  line-height: vars.$line-height-normal;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   ROOT APPLICATION
+========================================================= */
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================================================
+   GLOBAL ELEMENTS
+========================================================= */
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+img,
+svg,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* =========================================================
+   HEADINGS
+========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  color: vars.$color-text;
+  font-family: vars.$font-family-heading;
+  font-weight: vars.$font-weight-bold;
+  line-height: vars.$line-height-tight;
+}
+
+/* =========================================================
+   PARAGRAPH
+========================================================= */
+
+p {
+  margin: 0;
+}
+
+/* =========================================================
+   FORM ELEMENTS
+========================================================= */
+
+input,
+textarea,
+select {
+  width: 100%;
+  color: vars.$color-text;
+  background-color: vars.$color-surface;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: vars.$color-text-light;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+:focus-visible {
+  outline: 2px solid vars.$color-primary;
+  outline-offset: 2px;
+}
+
+/* =========================================================
+   SELECTION
+========================================================= */
+
+::selection {
+  color: vars.$color-text-white;
+  background-color: vars.$color-primary;
+}
+
+/* =========================================================
+   DISABLED
+========================================================= */
+
+button:disabled,
+input:disabled,
+textarea:disabled,
+select:disabled {
+  opacity: vars.$opacity-disabled;
+}
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* =========================================================
+   HR
+========================================================= */
+
+hr {
+  margin: 0;
+  border: 0;
+  border-top: 1px solid vars.$color-border;
+}
+
+/* =========================================================
+   TEXT UTILITIES
+========================================================= */
+
+strong,
+b {
+  font-weight: vars.$font-weight-bold;
+}
+
+small {
+  font-size: vars.$font-size-sm;
+}
+
+/* =========================================================
+   MOBILE TAP HIGHLIGHT
+========================================================= */
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
