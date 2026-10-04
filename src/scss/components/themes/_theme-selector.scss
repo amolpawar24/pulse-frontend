@@ -1,0 +1,340 @@
+@use "../../abstracts/variables" as vars;
+@use "../../abstracts/breakpoints" as *;
+
+/* =========================================================
+   PULSE - THEME SELECTOR
+========================================================= */
+
+.theme-selector {
+  width: min(100%, 720px);
+
+  padding: vars.$spacing-8;
+
+  border: 1px solid var(--pulse-color-border);
+  border-radius: vars.$radius-2xl;
+
+  background: var(--pulse-color-surface);
+  color: var(--pulse-color-text-primary);
+
+  box-shadow:
+    0 24px 70px var(--pulse-color-shadow),
+    0 0 40px var(--pulse-color-primary-soft);
+}
+
+/* ===================== HEADER ===================== */
+
+.theme-selector__header {
+  margin-bottom: vars.$spacing-8;
+}
+
+.theme-selector__eyebrow {
+  display: inline-block;
+
+  margin-bottom: vars.$spacing-2;
+
+  color: var(--pulse-color-primary);
+
+  font-size: vars.$font-size-xs;
+  font-weight: vars.$font-weight-bold;
+
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.theme-selector__title {
+  margin: 0;
+
+  color: var(--pulse-color-text-primary);
+
+  font-size: vars.$font-size-4xl;
+  font-weight: vars.$font-weight-extrabold;
+
+  line-height: 1.15;
+}
+
+.theme-selector__description {
+  max-width: 520px;
+
+  margin: vars.$spacing-3 0 0;
+
+  color: var(--pulse-color-text-secondary);
+
+  font-size: vars.$font-size-md;
+  line-height: 1.6;
+}
+
+/* ===================== SECTION ===================== */
+
+.theme-selector__section {
+  padding-top: vars.$spacing-6;
+
+  border-top: 1px solid var(--pulse-color-border);
+
+  & + & {
+    margin-top: vars.$spacing-6;
+  }
+}
+
+.theme-selector__label {
+  display: block;
+
+  margin-bottom: vars.$spacing-4;
+
+  color: var(--pulse-color-text-primary);
+
+  font-size: vars.$font-size-sm;
+  font-weight: vars.$font-weight-semibold;
+}
+
+/* ===================== APPEARANCE ===================== */
+
+.theme-selector__modes {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: vars.$spacing-3;
+}
+
+.theme-selector__mode {
+  display: flex;
+  align-items: center;
+
+  gap: vars.$spacing-3;
+
+  min-height: 56px;
+
+  padding: 0 vars.$spacing-4;
+
+  border: 1px solid var(--pulse-color-border);
+  border-radius: vars.$radius-lg;
+
+  background: var(--pulse-color-input);
+  color: var(--pulse-color-text-secondary);
+
+  cursor: pointer;
+
+  font: inherit;
+  font-weight: vars.$font-weight-semibold;
+
+  transition:
+    border-color vars.$transition-base,
+    background vars.$transition-base,
+    color vars.$transition-base,
+    box-shadow vars.$transition-base;
+
+  &:hover {
+    border-color: var(--pulse-color-primary);
+
+    color: var(--pulse-color-text-primary);
+  }
+
+  &:focus-visible {
+    outline: none;
+
+    box-shadow: vars.$focus-ring;
+  }
+
+  &--active {
+    border-color: var(--pulse-color-primary);
+
+    background: var(--pulse-color-primary-soft);
+
+    color: var(--pulse-color-primary);
+
+    box-shadow:
+      0 0 0 1px var(--pulse-color-primary),
+      0 0 24px var(--pulse-color-primary-soft);
+  }
+}
+
+.theme-selector__mode-icon {
+  display: grid;
+  place-items: center;
+
+  width: 32px;
+  height: 32px;
+
+  border-radius: vars.$radius-full;
+
+  background: var(--pulse-color-primary-soft);
+
+  color: var(--pulse-color-primary);
+
+  font-size: vars.$font-size-lg;
+}
+
+/* ===================== THEME COLORS ===================== */
+
+.theme-selector__colors {
+  display: grid;
+
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+
+  gap: vars.$spacing-3;
+}
+
+.theme-selector__color {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: vars.$spacing-2;
+
+  min-width: 0;
+
+  padding: vars.$spacing-3;
+
+  border: 1px solid transparent;
+  border-radius: vars.$radius-lg;
+
+  background: transparent;
+
+  color: var(--pulse-color-text-secondary);
+
+  cursor: pointer;
+
+  font: inherit;
+
+  transition:
+    border-color vars.$transition-base,
+    background vars.$transition-base,
+    color vars.$transition-base;
+
+  &:hover {
+    border-color: var(--pulse-color-border-strong);
+
+    background: var(--pulse-color-input);
+
+    color: var(--pulse-color-text-primary);
+  }
+
+  &:focus-visible {
+    outline: none;
+
+    box-shadow: vars.$focus-ring;
+  }
+
+  &--active {
+    border-color: var(--pulse-color-primary);
+
+    background: var(--pulse-color-primary-soft);
+
+    color: var(--pulse-color-primary);
+  }
+}
+
+.theme-selector__color-dot {
+  width: 24px;
+  height: 24px;
+
+  border-radius: vars.$radius-full;
+
+  background: var(--theme-selector-color);
+
+  box-shadow: 0 0 16px var(--theme-selector-color);
+}
+
+.theme-selector__color-name {
+  overflow: hidden;
+
+  max-width: 100%;
+
+  font-size: vars.$font-size-xs;
+  font-weight: vars.$font-weight-semibold;
+
+  text-overflow: ellipsis;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+/* ===================== COLORS ===================== */
+
+.theme-selector__color--red {
+  --theme-selector-color: #ef4444;
+}
+
+.theme-selector__color--blue {
+  --theme-selector-color: #3b82f6;
+}
+
+.theme-selector__color--green {
+  --theme-selector-color: #22c55e;
+}
+
+.theme-selector__color--pink {
+  --theme-selector-color: #ec4899;
+}
+
+.theme-selector__color--orange {
+  --theme-selector-color: #f97316;
+}
+
+/* =========================================================
+   MD DEVICES
+   ≤ 768px
+========================================================= */
+
+@include md {
+  .theme-selector {
+    padding: vars.$spacing-6;
+  }
+
+  .theme-selector__title {
+    font-size: vars.$font-size-3xl;
+  }
+}
+
+/* =========================================================
+   SM DEVICES
+   ≤ 576px
+========================================================= */
+
+@include sm {
+  .theme-selector__colors {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* =========================================================
+   XS DEVICES
+   ≤ 480px
+========================================================= */
+
+@include xs {
+  .theme-selector {
+    padding: vars.$spacing-5;
+  }
+
+  .theme-selector__modes {
+    grid-template-columns: 1fr;
+  }
+
+  .theme-selector__colors {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* =========================================================
+   XXS DEVICES
+   ≤ 320px
+========================================================= */
+
+@include xxs {
+  .theme-selector {
+    padding: vars.$spacing-4;
+  }
+
+  .theme-selector__colors {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===================== ACCESSIBILITY ===================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-selector__mode,
+  .theme-selector__color {
+    transition: none;
+  }
+}
